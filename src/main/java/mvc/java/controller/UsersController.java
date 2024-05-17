@@ -42,7 +42,7 @@ public class UsersController {
     public String showEditForm(@PathVariable("id") Long id, Model model, RedirectAttributes ra){
         try {
             User User = service.get(id);
-            model.addAttribute("User", User);
+            model.addAttribute("user", user);
             return "users/form";
         } catch (UserNotFoundException e) {
             ra.addFlashAttribute("message", "Thêm thành công");
